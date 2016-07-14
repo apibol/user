@@ -1,0 +1,23 @@
+---
+spring:
+  profiles: default
+  application:
+    name: users
+  cloud:
+    config:
+      uri: http://config:8001/
+## Remove this one when spring bug fixed
+server:
+  port: 7001
+
+---
+spring:
+  profiles: docker
+  application:
+    name: users
+  cloud:
+    config:
+      uri: http://config:8001/
+
+server:
+  port: 7001
